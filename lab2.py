@@ -1,4 +1,3 @@
-"""
 print("2.1")
 hi = input("Введите первую фразу: ")
 ily = input("Введите первую фразу: ")
@@ -111,7 +110,7 @@ print(result)
 
 print("2.22")
 print('Тема занятия "спецсимволы"')
-"""
+
 print("2.23")
 input_string = input()
 words = input_string.split()
@@ -125,7 +124,8 @@ result = words[0] + "'" + words[1].replace(' ', '"')
 print(result)
 
 print("2.25")
-
+a1 = r"C:\Windows\netdisc\drivers\tc\hosts"
+print(a1)
 
 print("2.26")
 name = input()
