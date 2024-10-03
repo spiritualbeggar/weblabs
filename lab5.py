@@ -31,7 +31,7 @@ print("5.6 Введите слово: ")
 word=input().lower()
 if 't' in word and 'h' in word and 'o' in word:print("Yes")
 else:print("No")
-"""
+
 print("5.7 Введите список городов: ")
 cities=input().split()
 if 'Москва' in cities:cities.remove('Москва')
@@ -150,7 +150,7 @@ if letter in vowels_ru or letter in vowels_en:print("Гласная")
 elif letter in "бвгджзйклмнпрстфхцчшщbcdfghjklmnpqrstvwxyz":print("Согласная")
 elif letter in "ъь":print(letter)
 else:print("Неправильно введена буква")
-
+"""
 print("5.25 Введите размер собаки и возраст в годах: ")
 size = input().upper()
 age = int(input())
