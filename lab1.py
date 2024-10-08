@@ -59,6 +59,7 @@ print("В столбик: ")
 for i in range (0,3):
     print(arr_19[i])
 
+
 # 1.10 1 способ
 print("1.10 1 способ: Введите 2 целых положительных числа: ")
 s = int(input("Первое число = "))
@@ -136,7 +137,6 @@ number = float(input("1.19 Введите вещественное число: "
 is_in_range = (-3 <= number <= 3) or (5 <= number <= 10)
 print(is_in_range)
 
-"""
 # 1.20
 print("1.20 Введите количество учащихся: ")
 students_class1 = int(input("Введите количество учащихся в первом классе: "))
@@ -147,8 +147,6 @@ desks_class2 = (students_class2 + 1) // 2
 desks_class3 = (students_class3 + 1) // 2
 total_desks = desks_class1 + desks_class2 + desks_class3
 print("Наименьшее число парт, которое нужно приобрести:", total_desks)
-
-"""
 
 
 

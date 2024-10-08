@@ -124,8 +124,7 @@ result = words[0] + "'" + words[1].replace(' ', '"')
 print(result)
 
 print("2.25")
-a1 = r"C:\Windows\netdisc\drivers\tc\hosts"
-print(a1)
+
 
 print("2.26")
 name = input()
