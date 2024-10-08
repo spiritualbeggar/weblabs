@@ -1,4 +1,4 @@
-"""
+import math
 print("5.1 Введите 2 вещественных числа: ")
 input_line=input()
 numbers=input_line.split()
@@ -150,20 +150,35 @@ if letter in vowels_ru or letter in vowels_en:print("Гласная")
 elif letter in "бвгджзйклмнпрстфхцчшщbcdfghjklmnpqrstvwxyz":print("Согласная")
 elif letter in "ъь":print(letter)
 else:print("Неправильно введена буква")
-"""
+
 print("5.25 Введите размер собаки и возраст в годах: ")
 size = input().upper()
 age = int(input())
 
-if size == 'М':
-    human_age = 16 * age + 31 if age > 2 else 10.5 * age
-elif size == 'С':
-    human_age = 12 * age + 31 if age > 2 else 10.5 * age
-elif size == 'К':
-    human_age = 8 * age + 31 if age > 2 else 10.5 * age
-else:
-    human_age = "Неправильно введен размер"
-print(human_age)
+print("5.25")
+size = input("Введите размер собаки: ")
+size = size.upper()
+age = int(input("Введите возраст собаки: "))
+if age==1:
+    print(15)
+if size=="М":
+    print(24 + (age-2)*4)
+if size=="С":
+    if 6<=age<=10:
+        print(round(45.8796*math.log(age) - 40.21))
+    elif 10<age<=16:
+        print(round(57.446*math.log(age) - 72.275))
+    else:
+        print(24 + (age-2)*4)
+if size=="К":
+    if (age==16):
+        print(120)
+    if 6<=age<=10:
+        print(round(41.11*math.log(age) - 28.66))
+    elif 10<age<=15:
+        print(round(67.71*math.log(age) - 90.35))
+    elif 1<=age<=5:
+        print(24 + (age-2)*4)
 
 
 
