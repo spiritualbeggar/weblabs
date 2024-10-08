@@ -316,8 +316,122 @@ while True:
     if char == ' ':
         break
     print(char, end='')
-"""
+
 print("6.39")
 num = input("Введите четырехзначное целое положительное число: ")
 it = iter(num)
 print(next(it), next(it), next(it), next(it))
+
+print("6.40 Введите натуральное число: ")
+N = int(input())
+matrix = [[1 for _ in range(N)] for _ in range(N)]
+for i in range(N):
+    matrix[i][-1] = 5
+for row in matrix:
+    print(' '.join(map(str, row)))
+
+print("6.41 Введите список URL: ")
+input_lines = input().strip().split('\n')
+for url in input_lines:
+    print('-'.join(url.split()))
+
+n = int(input("6.42 Введите натуральное число: "))
+is_prime = [True] * n
+for i in range(2, int(n**0.5) + 1):
+    if is_prime[i]:
+        for j in range(i*i, n, i):
+            is_prime[j] = False
+primes = [i for i in range(2, n) if is_prime[i]]
+print(' '.join(map(str, primes)))
+
+print("6.43 Введите двумерный список 5х5: ")
+matrix = [list(map(int, input().split())) for _ in range(5)]
+def check_surroundings(i, j):
+    for x in range(i-1, i+2):
+        for y in range(j-1, j+2):
+            if 0 <= x < 5 and 0 <= y < 5 and (x != i or y != j):
+                if matrix[x][y] == 1:
+                    return False
+    return True
+valid = True
+for i in range(5):
+    for j in range(5):
+        if matrix[i][j] == 1:
+            if not check_surroundings(i, j):
+                valid = False
+                break
+    if not valid:
+        break
+
+print("Yes" if valid else "No")
+
+print("6.44 Введите двумерный список 5х5: ")
+matrix = [list(map(int, input().split())) for _ in range(5)]
+def is_symmetric():
+    for i in range(5):
+        for j in range(5):
+            if matrix[i][j] != matrix[j][i]:
+                return False
+    return True
+
+print("Yes" if is_symmetric() else "No")
+
+n = int(input("6.45 Введите натуральное число: "))
+denominations = [64, 32, 16, 8, 4, 2, 1]
+result = []
+for denom in denominations:
+    while n >= denom:
+        result.append(denom)
+        n -= denom
+print(" ".join(map(str, result)))
+
+print("6.46 Введите вещественные чичсла в строку через пробел: ")
+numbers = list(map(float, input().split()))
+result = [abs(num) for num in numbers]
+print(result)
+
+number = input("6.47 Введите целое семизначное положительное число: ")
+result = [int(digit) for digit in number]
+print(result)
+
+print("6.48 Введите названия городов в строку через пробел: ")
+cities = input().split()
+result = [city for city in cities if len(city) > 5]
+print(" ".join(result))
+
+n = int(input("6.49 Введите натуральное число: "))
+divisors = [i for i in range(1, n + 1) if n % i == 0]
+print(" ".join(map(str, divisors)))
+
+N = int(input("6.50 Введите натуральное число: "))
+matrix = [[i] * N for i in range(N)]
+for row in matrix:
+    print(" ".join(map(str, row)))
+
+print("6.51 Введите список вещественных чисел: ")
+numbers = list(map(float, input().split()))
+result = [numbers[i] for i in range(len(numbers)) if i % 2 == 0]
+print(" ".join(map(str, result)))
+
+print("6.52 Введите два списка целых чисел одинаковой длины: ")
+list1 = list(map(int, input().split()))
+list2 = list(map(int, input().split()))
+result = [list1[i] + list2[i] for i in range(len(list1))]
+print(" ".join(map(str, result)))
+
+print("6.53 Введите список: ")
+data = input().split()
+result = [[data[i], int(data[i+1])] for i in range(0, len(data), 2)]
+print(result)
+"""
+print("6.54 Введите ваш пароль: ")
+password = input()
+has_lower = any(c.islower() for c in password)
+has_upper = any(c.isupper() for c in password)
+has_digit = any(c.isdigit() for c in password)
+has_special = any(c in "$#@!%?^&" for c in password)
+is_long_enough = len(password) >= 6
+if has_lower and has_upper and has_digit and has_special and is_long_enough:
+    print("Yes")
+else:
+    print("No")
