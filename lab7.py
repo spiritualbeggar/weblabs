@@ -94,3 +94,4 @@ print(' '.join(taken_items))
 input_str = input("Задание 7.13. Введите строку: ")
 d = {char: input_str.count(char) for char in input_str}
 print(d)
+
